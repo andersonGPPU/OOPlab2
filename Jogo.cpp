@@ -25,16 +25,15 @@ void Jogo::jogar(int tempo) {
 	calcular();
 }
 void Jogo::exibir() {
-	
 	std::cout << "nome: " << nome << '\t' << std::setprecision(2) << std::fixed << "R$: " << preco << '\t' << "R$/horas: " << custo << '\t' << "horas: " << horas << std::endl;
 }
 void Jogo::nome_bits() {
 	int i = 0;
 	while (nome[i]) {
 		std::bitset<8>mybit(nome[i]); //converte cada caractere em bits do tipo 'x' bits para bitset<x>
-		std::cout << mybit << '\t' //representação em bits do caractere nome[i]
+		std::cout << mybit << '\t' //representaÃ§Ã£o em bits do caractere nome[i]
 				  << nome[i] << '\t'
-				  << (int)(mybit.to_ulong()) << '\t' //representação como inteiro de nome[i]
+				  << (int)(mybit.to_ulong()) << '\t' //representaÃ§Ã£o como inteiro de nome[i]
 			      << (char)(mybit.to_ulong()) << '\t' 
 			      << int(nome[i]) << std::endl; //converte caractere nome[i] em inteiro
 		++i;
@@ -46,11 +45,11 @@ void Jogo::gravar() {
 	
 	fout.open(nome, std::ios_base::app | std::ios_base::binary);
 	if (!fout.is_open()) { std::cout << "Erro ao tentar gravar!" << std::endl; exit(1); }
-	else { std::cout << "\nIniciando a gravação do arquivo <" << nome << ">" << std::endl; }
+	else { std::cout << "\nIniciando a gravaÃ§Ã£o do arquivo <" << nome << ">" << std::endl; }
 	
 	fout << preco << '\t' << horas << '\t' << custo << '\n';
 
-	fout.close(); std::cout << "Arquivo <" << nome << "> foi fechado após gravação!" << std::endl;
+	fout.close(); std::cout << "Arquivo <" << nome << "> foi fechado apÃ³s gravaÃ§Ã£o!" << std::endl;
 }
 void Jogo::leitura() {
 	std::ifstream fin;
@@ -63,8 +62,8 @@ void Jogo::leitura() {
 	
 	while (!fin.eof()) {
 		fin >> ler_objeto.preco >> ler_objeto.horas >> ler_objeto.custo;
-		std::cout << "Preço R$: " << ler_objeto.preco << "\tHoras: " << ler_objeto.horas << "\tCusto (R$/horas): " << ler_objeto.custo << std::endl;
+		std::cout << "PreÃ§o R$: " << ler_objeto.preco << "\tHoras: " << ler_objeto.horas << "\tCusto (R$/horas): " << ler_objeto.custo << std::endl;
 	}
 
-	fin.close(); std::cout << "Arquivo <" << nome << "> foi fechado após leitura!" << std::endl;
+	fin.close(); std::cout << "Arquivo <" << nome << "> foi fechado apÃ³s leitura!" << std::endl;
 }
