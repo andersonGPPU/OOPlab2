@@ -1,3 +1,3 @@
-# OOPlab2
-Laboratório 2
+# OOPlab
+Laboratório
 acompanha https://github.com/JudsonSS/POO
