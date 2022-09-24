@@ -21,6 +21,7 @@ public:
 	void atualizar(float custo);
 	void jogar(int tempo);
 	void exibir();
+	const void exibir_cst();
 	void gravar_arquivo();
 	void ler_arquivo();
 }; 
