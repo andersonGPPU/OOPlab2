@@ -7,8 +7,7 @@ private:
 	unsigned int horas;
 	double custo;
 
-	void calcular();
-
+	inline void calcular();
 public:
 	Jogo();
 	Jogo(const char* nome, double preco = 0.0f, unsigned int horas = 0);
@@ -25,3 +24,7 @@ public:
 	const Jogo& comparar(const Jogo& jogo) const;
 };
 #endif
+
+inline void Jogo::calcular() {
+	if (horas > 0) custo = double(preco) / horas;
+}
