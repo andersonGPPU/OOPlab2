@@ -7,7 +7,7 @@ private:
 	unsigned int horas;
 	double custo;
 
-	void Calcular();
+	//void Calcular();
 public:
 	Jogo();
 	Jogo(const char* nome, double preco = 0.0f, unsigned int horas = 0);
@@ -30,7 +30,7 @@ public:
 		const Jogo& (func)(const Jogo&, const Jogo&)) const;
 };
 #endif
-//Métodos inline
+//MÃ©todos inline
 inline void Jogo::Calcular() {
 	if (horas > 0) custo = double(preco) / horas;
 }
@@ -40,6 +40,6 @@ inline double Jogo::Custo() const {
 inline unsigned int Jogo::Horas() const {
 	return horas;
 }
-//funções auxiliares
+//funÃ§Ãµes auxiliares
 const Jogo& MaisJogado(const Jogo&, const Jogo&);
 const Jogo& MenorCusto(const Jogo&, const Jogo&);
