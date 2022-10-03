@@ -3,25 +3,27 @@
 #include <windows.h>
 #include <cctype>
 #include "Jogo.h"
+//#include "Jogo.cpp" //linux
 
 const int MAX = 6;
 
 int main(void) {
-	setlocale(LC_ALL, "Portuguese_Brasil.1252"); system("chcp 1252 > nul");
-	//SetConsoleCP(1252); SetConsoleOutputCP(1252);
+	//setlocale(LC_ALL,""); //linux
+	setlocale(LC_ALL, "Portuguese_Brasil.1252"); system("chcp 1252 > nul"); //windows
+	//SetConsoleCP(1252); SetConsoleOutputCP(1252); //windows
 
 	//vetor de objetos inicializados
 	Jogo colecao[MAX] =
 	{
 		Jogo("Gears - A grande batalha", 90.0f, 30),
-		Jogo("Doom - a nova geraÁ„o", 60.0f, 120),
+		Jogo("Doom - a nova gera√ß√£o", 60.0f, 120),
 		Jogo("Halo - Microsoft", 80.0f, 40),
-		Jogo("Thor - o deus do trov„o. Parte 5.", 50.55f, 60),
+		Jogo("Thor - o deus do trov√£o. Parte 5.", 50.55f, 60),
 		Jogo("O Espetacular Homem-Aranha", 115.65f, 48),
 		Jogo()
 	};
 
-	std::cout << "ColeÁ„o de Jogos:\n";
+	std::cout << "Cole√ß√£o de Jogos:\n";
 	for (short i = 0; i < MAX; colecao[i].Exibir(), i++);
 
 	//aponta para o primeiro elemento
@@ -45,7 +47,7 @@ int main(void) {
 
 	//segunda parte
 	Jogo gears{ "Efeito Colateral - Grande Filme!", 200.0f,100 };
-	Jogo doom{ "Game Doom - Explos„o Fatal", 120.0f,80 };
+	Jogo doom{ "Game Doom - Explos√£o Fatal", 120.0f,80 };
 
 	const Jogo& topPlay = gears.Comparar_Ptr(doom, MaisJogado);
 	const Jogo& topValue = gears.Comparar_Ptr(doom, MenorCusto);
