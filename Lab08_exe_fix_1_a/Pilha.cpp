@@ -29,6 +29,6 @@ bool Pilha::Desempilhar(Item& item) {
 	else return false;
 }
 
-Item* Pilha::Escrever_Item() {
+Item* Pilha::Escrever_Item() const {
 	return itens;
 }
