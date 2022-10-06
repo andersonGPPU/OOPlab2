@@ -16,6 +16,7 @@ bool Pilha::Vazia() const {
 bool Pilha::Empilhar(const Item& item) {
 	if (topo < tam) {
 		*(itens + topo++) = item;
+		itens[1 + topo] = '\0';
 		return true;
 	}
 	else return false;
