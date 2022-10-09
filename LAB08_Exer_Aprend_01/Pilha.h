@@ -21,7 +21,7 @@ public:
 	void Empilhar(const Item&); //adiciona item na pilha
 	void Desempilhar(Item&); //remove item da pilha
 	
-	bool Comparar(const Item* palavra, Item& xis);
+	bool Comparar(const Item*, Item&);
 
 };
 #endif
