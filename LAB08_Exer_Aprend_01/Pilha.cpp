@@ -41,13 +41,9 @@ void Pilha::Empilhar(const Item& item) {
 	std::cout << " [" << item << "] Empilhado\n";
 }
 void Pilha::Desempilhar(Item& item) {
-	if (topo > 0) {
-		item = *(itens + --topo);}
-		/*return true;
-	}
-	else return false;*/
+	if (topo > 0) item = *(itens + --topo);
 }
-bool Pilha::Comparar(const Item* palavra, Item& item) {
+bool Pilha::Comparar(const Item* palavra, Item& item) { //palavra = grupo de chars; item é um char
 	unsigned int cont = 0;
 	for(unsigned i = 0; palavra[i]; i++) { Empilhar(palavra[i]); }
 	
