@@ -1,3 +1,5 @@
+//a solução se aplica apenas para o caso de se coincidir os parênteses '(' e ')'
+
 #include <iostream>
 #include <windows.h>
 #include <locale>
@@ -26,7 +28,7 @@ int main(void) {
 	if (teste.Verificar(exp_4)) { std::cout << "\nOk" << std::endl; }
 	else { std::cout << "\nErro em " << exp_4 << std::endl; }
 
-	std::cout << "Digite uma express�o: ";
+	std::cout << "Digite uma expressão: ";
 	std::cin.getline(exp_user, sizeof(exp_user));
 
 	if (teste.Verificar(exp_user)) { std::cout << "\nOk" << std::endl; }
