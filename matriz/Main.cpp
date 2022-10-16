@@ -2,10 +2,12 @@
 #include <math.h>
 #include <locale>
 #include "matrix.h"
-#include "matrix.cpp"
+#include "matrix.cpp" //linux gcc e clang
 
 int main(int argc, char* argv[]) {
 	setlocale(LC_ALL,"");//linux
+	// setlocale(LC_ALL, "Portuguese_Brasil.1252"); system("chcp 1252 > nul"); //windows
+	// SetConsoleCP(1252); SetConsoleOutputCP(1252); //windows
 	
 	Matrix m1 = Matrix(10,10);
 
