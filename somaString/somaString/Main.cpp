@@ -1,3 +1,7 @@
+/* CÓDIGO PARA ESTUDO e verificação do funcionamento de arrays e seus problemas de manipulação, principalmente por
+não podermos inserir um ponto de parada '\0', embora tenha sido embutido no looping com intuito de comparar no 
+momento da DEPURAÇÃO e seu efeito no resultado. */
+
 #include <iostream>
 //#include <windows.h>
 #include <locale>
@@ -11,7 +15,7 @@ int main(int argc, char* argv[]) {
 	//setlocale(LC_ALL, "Portuguese_Brasil.1252"); //linux
 
 	char c[] = "teste bem maior de dados.";
-	char d[] = " Com mais informa��o!";
+	char d[] = " Com mais informação!";
 
 	const char* e = "Segundo teste.";
 	const char* f = " Continua aqui.";
