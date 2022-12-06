@@ -18,26 +18,26 @@ int main(int argc, char* argv[]) {
 	Cadastro cd(file);
 
 	while (exe) {
-		std::cout << "Entre com a operação desejada: " << std::endl;
+		std::cout << "Entre com a operaÃ§Ã£o desejada: " << std::endl;
 		std::cout << "[1] - inserir dado." << std::endl;
 		std::cout << "[2] - mostrar dados." << std::endl;
 		std::cout << "[3] - limpar dados." << std::endl;
 		std::cout << "[4] - terminar o programa." << std::endl;
 
-		std::cin.get(op);
+		op = (char)std::cin.get();
 		std::cin.ignore();
-		std::cout << "Operação selecionada " << op << std::endl;
+		std::cout << "OperaÃ§Ã£o selecionada " << op << std::endl;
 
 		switch (op) {
 		case '1': {
 			std::string name{}, age{};
 			std::cout << "Entre com o nome: ";
-			std::getline(std::cin, name);
+			std::getline(std::cin, name); std::cout << " - informaÃ§Ã£o adicionada, pressione [ENTER] ";
 			std::cin.ignore();
 			std::cout << "Entre com a idade: ";
-			std::getline(std::cin, age);
+			std::getline(std::cin, age); std::cout << " - informaÃ§Ã£o adicionada, pressione [ENTER] ";
 			std::cin.ignore();
-			std::cout << "Cadastro a ser inserido:\n" <<
+			std::cout << ">> Cadastro a ser inserido:\n" <<
 				std::left << std::setw(25) << name << " " << std::setw(3) << age << std::endl;
 
 			cd.writeLinesToFile(name, age);
@@ -58,7 +58,7 @@ int main(int argc, char* argv[]) {
 				break;
 		default: { 
 			std::cout << "\n==============================================\n";
-			std::cout << "||Operação não encontrada, tente novamente! ||\n"; 
+			std::cout << "||OperaÃ§Ã£o nÃ£o encontrada, tente novamente! ||\n"; 
 			std::cout << "==============================================\n\n"; }
 			   break;
 		}
